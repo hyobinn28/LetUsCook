@@ -22,11 +22,11 @@
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
->  * * Back-End Developer
->     * User Account Management: Handle user registration, login
->      * Input: Username, password
->      * Output: user authentication tokens, success or error messages
->    * Receipe Operations:
+>   Back-End Developer
+>    * User Account Management: Handle user registration, login
+>    * Input: Username, password
+>    * Output: user authentication tokens, success or error messages
+>    Receipe Operations:
 >    * Create Recipe: Allow users to add new recipes
 >    * Input: recipe details: name, ingredients, instructions, tags
 >    * Output: confirmation message, recipe I
