@@ -24,6 +24,22 @@
 >  * C++
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
+>  * Front-End Developer Contribution to Recipe Manager Project
+Programming Languages: JavaScript, HTML/CSS
+Styling Framework: Bootstrap
+Dynamic Components: React.js
+Responsibilities:
+Website Layout Design:
+Designing the overall layout of the website, ensuring it is visually appealing for users. 
+Login and Registration Pages:
+I will help in creating the front-end components for the login and registration pages. These components will be connected to the backend to handle user authentication.
+Search and Filter Interface:
+Design an interface that allows users to search recipes based on various criteria. This feature is crucial for helping users easily find specific recipes from the database.
+Interactive Features:
+Implement interactive features using JavaScript and use the dynamic components from React.js to help create reusability of the code for efficiency.
+Code Documentation:
+Regularly commit code to the project repository so that all front-end changes are documented and attributed correctly. This will help provide clear records of the development process.
+
 >   * Back-End Developer
 >    * **User Account Management: Handle user registration, login**
 >    * Input: Username, password
