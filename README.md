@@ -22,6 +22,34 @@
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
+>  * * Back-End Developer
+>    * User Account Management: Handle user registration, login
+>    * Input: Username, password
+>    * Output: user authentication tokens, success or error messages
+>    * Receipe Operations:
+>    * Create Recipe: Allow users to add new recipes
+>    * Input: recipe details: name, ingredients, instructions, tags
+>    * Output: confirmation message, recipe I
+>    * Read Recipe: Retrieve and display recipes from database
+>    * Input: Search queries, filters, Recipe ID
+>    * Output: Recipe details (name, ingredients, instructions, tags)
+>    * Update Recipe: allow users to edit their existing recipes
+>    * Input: Recipe ID, updated recipe details
+>    * Output: Confirmation message
+>    * Delete Recipe: Allow users to delete recipes
+>    * Input: Recipe ID
+>    * Output: confirmation message, error messages if it does not exist
+>    * User Profile Management: Store and manage user data, saved recipes, personal details…
+>    * Input: User ID, profile updates
+>    * Output: updated user profile data, confirmation message
+>    * Recipe Rating and Reviews:
+>    * Input: Recipe ID, user rating (1-5 stars), review text
+>    * Output: Updated recipe rating, list of recent reviews
+>    * Recipe Search and Filtering
+>    * Input: search queries, filter options
+>    * Output: list of matching recipes, sorted based on relevance
+
+
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
