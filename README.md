@@ -20,32 +20,33 @@
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+>  * C++
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
 >   * Back-End Developer
->    * User Account Management: Handle user registration, login
+>    * **User Account Management: Handle user registration, login**
 >    * Input: Username, password
 >    * Output: user authentication tokens, success or error messages
->    Receipe Operations:
->    * Create Recipe: Allow users to add new recipes
+>    * **Receipe Operations:**
+>    * **Create Recipe: Allow users to add new recipes**
 >    * Input: recipe details: name, ingredients, instructions, tags
 >    * Output: confirmation message, recipe I
->    * Read Recipe: Retrieve and display recipes from database
+>    * **Read Recipe: Retrieve and display recipes from database**
 >    * Input: Search queries, filters, Recipe ID
 >    * Output: Recipe details (name, ingredients, instructions, tags)
->    * Update Recipe: allow users to edit their existing recipes
+>    * **Update Recipe: allow users to edit their existing recipes**
 >    * Input: Recipe ID, updated recipe details
 >    * Output: Confirmation message
->    * Delete Recipe: Allow users to delete recipes
+>    * **Delete Recipe: Allow users to delete recipes**
 >    * Input: Recipe ID
 >    * Output: confirmation message, error messages if it does not exist
->    * User Profile Management: Store and manage user data, saved recipes, personal details…
+>    * **User Profile Management: Store and manage user data, saved recipes, personal details…**
 >    * Input: User ID, profile updates
 >    * Output: updated user profile data, confirmation message
->    * Recipe Rating and Reviews:
+>    * **Recipe Rating and Reviews:**
 >    * Input: Recipe ID, user rating (1-5 stars), review text
 >    * Output: Updated recipe rating, list of recent reviews
->    * Recipe Search and Filtering
+>    * **Recipe Search and Filtering**
 >    * Input: search queries, filter options
 >    * Output: list of matching recipes, sorted based on relevance
 
