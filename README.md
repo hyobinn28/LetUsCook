@@ -23,9 +23,9 @@
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
 >  * * Back-End Developer
->    * User Account Management: Handle user registration, login
->    * Input: Username, password
->    * Output: user authentication tokens, success or error messages
+>     * User Account Management: Handle user registration, login
+>      * Input: Username, password
+>      * Output: user authentication tokens, success or error messages
 >    * Receipe Operations:
 >    * Create Recipe: Allow users to add new recipes
 >    * Input: recipe details: name, ingredients, instructions, tags
