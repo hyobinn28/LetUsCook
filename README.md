@@ -22,7 +22,7 @@
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
->   Back-End Developer
+>   * Back-End Developer
 >    * User Account Management: Handle user registration, login
 >    * Input: Username, password
 >    * Output: user authentication tokens, success or error messages
