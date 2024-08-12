@@ -19,6 +19,7 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
+>  * This project is exciting because it lets us build something real that people can actually use to find and share recipes easily. It's a great way to see how our coding skills can come together to create a smooth, interactive experience for users.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
 >  * C++
  > * What will be the input/output of your project?
