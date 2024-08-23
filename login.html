@@ -10,19 +10,37 @@
 <body>
     <div class="container mt-5">
         <h2>Login</h2>
-        <form>
+        <form id="loginForm">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                <input type="text" class="form-control" id="username" placeholder="Enter username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        document.getElementById("loginForm").onsubmit = function(event) {
+            event.preventDefault();  // Prevents the form from submitting and refreshing the page
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+
+            const user = users.find(user => user.username === username && user.password === password);
+            
+            if (user) {
+                alert("Login successful!");
+                // Redirect to a different page, e.g., the user's dashboard
+                window.location.href = "recipes.html";  // Example redirect
+            } else {
+                alert("User not found. Redirecting to registration page.");
+                window.location.href = "register.html";
+            }
+        };
+    </script>
 </body>
 </html>
