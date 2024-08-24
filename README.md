@@ -95,6 +95,27 @@ Regularly commit code to the project repository so that all front-end changes ar
 ## Class Diagram
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides). <img width="440" alt="image" src="https://github.com/user-attachments/assets/50d024e1-7bbc-4ff1-9282-17d6e31efb2e">
 
+ The class diagram provides an overview of the primary components in the "Let Us Cook" project and how they interact with each other. Below is a detailed explanation of each class:
+
+1. **Recipe Class:**
+   - The `Recipe` class encapsulates the details of a recipe, including its name, ingredients, instructions, and tags. It provides methods for serializing the recipe into a string format for storage and deserializing it back into a `Recipe` object.
+
+2. **User Class:**
+   - The `User` class represents a user in the system. It stores the user's `username`, a hashed version of their `password`, and a list of `savedRecipes` (referenced by Recipe IDs). The `User` class also provides methods for user authentication and managing saved recipes.
+
+3. **RecipeManager Class:**
+   - The `RecipeManager` class handles the operations related to recipe management. It maintains a `recipeDatabase` that stores recipes identified by a unique `RecipeID`. The class includes methods for creating, reading, updating, and deleting recipes, as well as searching for recipes based on user queries.
+
+4. **UserManager Class:**
+   - The `UserManager` class is responsible for managing user-related operations. It maintains a `userDatabase` where each user is identified by their `username`. The class provides methods for user registration, login, and updating user profiles. It also allows for retrieving a user's profile details.
+
+### Relationships and Interactions:
+- **RecipeManager**: This class interacts with the `Recipe` class by performing CRUD operations on the `recipeDatabase`. It ensures that recipes are correctly stored, updated, retrieved, and deleted.
+- **UserManager**: The `UserManager` class interacts with the `User` class by handling user authentication and profile management. It maintains a `userDatabase` and ensures secure handling of user information.
+- **User-Recipe Relationship**: Each `User` can save multiple recipes, identified by their `RecipeID`. This creates a link between the `User` and the `Recipe` classes, managed by the `UserManager`.
+
+This diagram and description outline the core structure of the "Let Us Cook" project, highlighting how data flows between classes and how responsibilities are distributed across different components.
+
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
