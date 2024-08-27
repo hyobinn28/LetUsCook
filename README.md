@@ -66,6 +66,23 @@ Regularly commit code to the project repository so that all front-end changes ar
 >    * **Recipe Search and Filtering**
 >    * Input: search queries, filter options
 >    * Output: list of matching recipes, sorted based on relevance
+>
+>    1. Routing and Request Handling
+>    * Define routes to manage different endpoints in the application (recipe search, and recipe details)
+>    * Handle HTTP requests and render appropriate HTML templates
+>    2. Template Rendering
+>    * Use Flask templating engine to render HTML templates
+>    * Dynamically inject content such as recipe lists, search results, and recipe details into the HTML pages
+>    3. Data Management
+>    * Manage data interactions, including fetching and passing data (recipe information) to templates for rendering
+>    * Ensure data is correctly displayed and handled across different routes and pages
+>    4. Search and Filtering Logic
+>    * Implement search functionality that allows users to search for recipes based on keywords
+>    * Process search queries, filter results, and render the filtered list of recipes
+>    6. Error Handling
+>    * Implement error handling for missing templates, invalid routes, and other potential issues
+>    * Provide user-friendly messages and fallback options in case of errors
+
 
 
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
