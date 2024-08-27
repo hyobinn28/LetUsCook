@@ -36,7 +36,7 @@
 
     <script>
         document.getElementById("loginForm").onsubmit = function(event) {
-            event.preventDefault();  // Prevents the form from submitting and refreshing the page
+            event.preventDefault();  // Prevents the form from submitting and refreshes the page
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
             const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -45,8 +45,8 @@
             
             if (user) {
                 alert("Login successful!");
-                // Redirect to a different page, e.g., the user's dashboard
-                window.location.href = "recipes.html";  // Example redirect
+                // Redirect to a different page
+                window.location.href = "recipes.html";  
             } else {
                 alert("User not found. Redirecting to registration page.");
                 window.location.href = "register.html";
