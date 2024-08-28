@@ -190,6 +190,7 @@ LetUsCook: CMakeFiles/LetUsCook.dir/src/bcrypt.cpp.o
 LetUsCook: CMakeFiles/LetUsCook.dir/build.make
 LetUsCook: /opt/homebrew/Cellar/openssl@3/3.3.1/lib/libssl.dylib
 LetUsCook: /opt/homebrew/Cellar/openssl@3/3.3.1/lib/libcrypto.dylib
+LetUsCook: /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/lib/libmysqlcppconn8-static.a
 LetUsCook: CMakeFiles/LetUsCook.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mac/final/final-project-template-let-us-cook/backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable LetUsCook"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LetUsCook.dir/link.txt --verbose=$(VERBOSE)

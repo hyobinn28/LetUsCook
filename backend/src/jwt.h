@@ -7,8 +7,8 @@ using namespace std;
 
 namespace jwt {
     string createToken(int userId); 
-    int getUserIdFromToken(const string& token);
-    bool validateToken(const string& token); 
+    int getUserIdFromToken(const string &token);
+    bool validateToken(const string &token); 
 
 }
 #endif

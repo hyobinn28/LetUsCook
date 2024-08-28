@@ -1,10 +1,10 @@
 #include "jwt.h"
-#include <jwt-cpp/jwt.h> // Include the jwt-cpp library
+#include <jwt-cpp/jwt.h> 
 
 using namespace std;
 
 namespace {
-    const string secret_key = "your_secret_key_here";
+    const string secret_key = "california";
 }
 
 string jwt::createToken(int userId) {
@@ -16,13 +16,13 @@ string jwt::createToken(int userId) {
     return token;
 }
 
-int jwt::getUserIdFromToken(const string& token) {
+int jwt::getUserIdFromToken(const string &token) {
     auto decodedToken = jwt::decode(token);
     auto userId = decodedToken.get_payload_claim("user_id").as_string();
     return stoi(userId);
 }
 
-bool jwt::validateToken(const string& token) {
+bool jwt::validateToken(const string &token) {
     try {
         auto verifier = jwt::verify()
                         .allow_algorithm(jwt::algorithm::hs256{secret_key})
@@ -30,7 +30,7 @@ bool jwt::validateToken(const string& token) {
         verifier.verify(jwt::decode(token));
         return true;
     } 
-    catch (const exception& e) {
+    catch (const exception &e) {
         cerr << "JWT validation error: " << e.what() << endl;
         return false;
     }

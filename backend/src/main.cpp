@@ -11,13 +11,13 @@ void displayMenu() {
     cout << "3. Exit\n";
 }
 
-void userMenu(RecipeManager& recipeManager, const string& token) {
-    while (true) {
+void userMenu(RecipeManager &recipeManager, const string &token) {
+    while(true) {
         cout << "\nChoose an option (create, read, update, delete, search, view, logout): ";
         string choice;
         cin >> choice;
 
-        if (choice == "create") {
+        if(choice == "create") {
             Recipe recipe;
             cout << "Enter recipe name: ";
             cin.ignore();
@@ -39,7 +39,8 @@ void userMenu(RecipeManager& recipeManager, const string& token) {
             int id = recipeManager.createRecipe(token, recipe);
             cout << "Recipe created with ID: " << id << endl;
 
-        } else if (choice == "read") {
+        }
+        else if(choice == "read") {
             int id;
             cout << "Enter recipe ID: ";
             cin >> id;
@@ -49,11 +50,13 @@ void userMenu(RecipeManager& recipeManager, const string& token) {
                 cout << "Ingredients: " << recipe.getIngredientsAsString() << endl;
                 cout << "Instructions: " << recipe.instructions << endl;
                 cout << "Tags: " << recipe.getTagsAsString() << endl;
-            } catch (const exception& e) {
+            }
+            catch (const exception& e) {
                 cout << e.what() << endl;
             }
 
-        } else if (choice == "update") {
+        }
+        else if(choice == "update") {
             int id;
             cout << "Enter recipe ID to update: ";
             cin >> id;
@@ -79,38 +82,46 @@ void userMenu(RecipeManager& recipeManager, const string& token) {
             recipeManager.updateRecipe(token, id, recipe);
             cout << "Recipe updated." << endl;
 
-        } else if (choice == "delete") {
+        }
+        else if (choice == "delete") {
             int id;
             cout << "Enter recipe ID to delete: ";
             cin >> id;
             try {
                 recipeManager.deleteRecipe(token, id);
                 cout << "Recipe deleted." << endl;
-            } catch (const exception& e) {
+            }
+            catch(const exception& e) {
                 cout << e.what() << endl;
             }
 
-        } else if (choice == "search") {
+        }
+        else if(choice == "search") {
             string query;
             cout << "Enter search query: ";
             cin.ignore();
             getline(cin, query);
 
             vector<Recipe> results = recipeManager.searchRecipes(query);
-            for (const auto& recipe : results) {
+
+            for(const auto &recipe : results) {
                 cout << "Recipe Name: " << recipe.name << endl;
             }
 
-        } else if (choice == "view") {
+        }
+        else if (choice == "view") {
             vector<Recipe> userRecipes = recipeManager.getUserRecipes(token);
-            for (const auto& recipe : userRecipes) {
+
+            for(const auto& recipe : userRecipes) {
                 cout << "Recipe ID: " << recipe.id << " - " << recipe.name << endl;
             }
 
-        } else if (choice == "logout") {
+        }
+        else if(choice == "logout") {
             cout << "Logged out successfully." << endl;
             break;
-        } else {
+        }
+        else {
             cout << "Invalid choice, please try again." << endl;
         }
     }
@@ -120,12 +131,12 @@ int main() {
     UserManager userManager;
     RecipeManager recipeManager;
 
-    while (true) {
+    while(true) {
         displayMenu();
         string choice;
         cin >> choice;
 
-        if (choice == "1") {
+        if(choice == "1") {
             string username, email, password;
             cout << "Enter username: ";
             cin >> username;
@@ -134,13 +145,15 @@ int main() {
             cout << "Enter password: ";
             cin >> password;
 
-            if (userManager.registerUser(username, email, password)) {
+            if(userManager.registerUser(username, email, password)) {
                 cout << "Registration successful!" << endl;
-            } else {
+            }
+            else {
                 cout << "Registration failed." << endl;
             }
 
-        } else if (choice == "2") {
+        }
+        else if (choice == "2") {
             string username, password;
             cout << "Enter username: ";
             cin >> username;
@@ -151,15 +164,18 @@ int main() {
                 string token = userManager.loginUser(username, password);
                 cout << "Login successful!" << endl;
                 userMenu(recipeManager, token);
-            } catch (const exception& e) {
+            }
+            catch (const exception &e) {
                 cout << "Login failed: " << e.what() << endl;
             }
 
-        } else if (choice == "3") {
+        }
+        else if(choice == "3") {
             cout << "Exiting..." << endl;
             break;
 
-        } else {
+        }
+        else {
             cout << "Invalid option. Please try again." << endl;
         }
     }

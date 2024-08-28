@@ -1,7 +1,7 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include <mysqlx/xdevapi.h> // Include the MySQL X DevAPI header
+#include <mysqlx/xdevapi.h> 
 #include <string>
 #include <vector>
 #include <map>
@@ -13,13 +13,13 @@ public:
     Database(); 
     ~Database(); 
     
-    bool execute(const string& query);
-    vector<map<string, string>> query(const string& query); 
+    bool execute(const string &query);
+    vector<map<string, string>> query(const string &query); 
     int getLastInsertId(); 
 
 private:
-    mysqlx::Session* session; 
-    mysqlx::Schema* schema;   
+    mysqlx::Session *session; 
+    mysqlx::Schema *schema;   
 };
 
 #endif

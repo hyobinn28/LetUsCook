@@ -5,15 +5,23 @@
 
 using namespace std;
 
-int RecipeManager::createRecipe(const string& token, const Recipe& recipe) {
-    int userId = jwt::getUserIdFromToken(token);
-    Database db;
-    string query = "INSERT INTO recipes (userId, name, ingredients, instructions, tags) VALUES (" +
-                   to_string(userId) + ", '" + recipe.name + "', '" + recipe.getIngredientsAsString() + 
-                   "', '" + recipe.instructions + "', '" + recipe.getTagsAsString() + "');";
-    db.execute(query);
-    return db.getLastInsertId();
+int RecipeManager::createRecipe(const string &token, const Recipe &recipe) {
+    try {
+        int userId = jwt::getUserIdFromToken(token);
+        Database db;
+        stringstream query;
+        query << "INSERT INTO recipes (userId, name, ingredients, instructions, tags) VALUES ("
+              << userId << ", '" << recipe.name << "', '" << recipe.getIngredientsAsString() 
+              << "', '" << recipe.instructions << "', '" << recipe.getTagsAsString() << "');";
+        db.execute(query.str());
+        return db.getLastInsertId();
+    }
+    catch (const exception &e) {
+        cerr << "Error creating recipe: " << e.what() << endl;
+        return -1;
+    }
 }
+
 
 Recipe RecipeManager::readRecipe(int recipeId) {
     Database db;

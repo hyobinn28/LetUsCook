@@ -3677,7 +3677,36 @@ CMakeFiles/LetUsCook.dir/src/UserManager.cpp.o: /Users/mac/final/final-project-t
   /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/mysqlx/devapi/settings.h \
   /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/mysqlx/devapi/table_crud.h \
   /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/mysqlx/version_info.h \
-  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/mysqlx/xdevapi.h
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/mysqlx/xdevapi.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/asn1.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/asn1err.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/bio.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/bioerr.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/bn.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/bnerr.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/buffer.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/buffererr.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/configuration.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/core.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/core_dispatch.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/crypto.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/cryptoerr.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/cryptoerr_legacy.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/e_os2.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/evp.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/evperr.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/macros.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/obj_mac.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/objects.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/objectserr.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/opensslconf.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/opensslv.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/params.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/safestack.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/sha.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/stack.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/symhacks.h \
+  /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/types.h
 
 CMakeFiles/LetUsCook.dir/src/bcrypt.cpp.o: /Users/mac/final/final-project-template-let-us-cook/backend/src/bcrypt.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/Availability.h \
@@ -6358,8 +6387,6 @@ CMakeFiles/LetUsCook.dir/src/main.cpp.o: /Users/mac/final/final-project-template
 
 /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/comp.h:
 
-/Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/buffererr.h:
-
 /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/async.h:
 
 /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/jwt-cpp/traits/kazuho-picojson/traits.h:
@@ -6395,6 +6422,8 @@ CMakeFiles/LetUsCook.dir/src/main.cpp.o: /Users/mac/final/final-project-template
 /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/core_dispatch.h:
 
 /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/core.h:
+
+/Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/buffererr.h:
 
 /Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/include/openssl/bio.h:
 

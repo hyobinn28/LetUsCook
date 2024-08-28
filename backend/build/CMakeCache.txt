@@ -67,7 +67,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
 //Flags used by the linker during all build types.
-CMAKE_EXE_LINKER_FLAGS:STRING=-L/opt/homebrew/opt/libxcrypt/lib
+CMAKE_EXE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during DEBUG builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
@@ -101,7 +101,7 @@ CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules during
 // all build types.
-CMAKE_MODULE_LINKER_FLAGS:STRING=-L/opt/homebrew/opt/libxcrypt/lib
+CMAKE_MODULE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during the creation of modules during
 // DEBUG builds.
@@ -156,7 +156,7 @@ CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
-CMAKE_SHARED_LINKER_FLAGS:STRING=-L/opt/homebrew/opt/libxcrypt/lib
+CMAKE_SHARED_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during the creation of shared libraries
 // during DEBUG builds.
@@ -223,7 +223,7 @@ LetUsCook_IS_TOP_LEVEL:STATIC=ON
 LetUsCook_SOURCE_DIR:STATIC=/Users/mac/final/final-project-template-let-us-cook/backend
 
 //Path to a library.
-MYSQL_CLIENT:FILEPATH=MYSQL_CLIENT-NOTFOUND
+MYSQL_CLIENT:FILEPATH=/Users/mac/final/final-project-template-let-us-cook/vcpkg/installed/arm64-osx/lib/libmysqlcppconn8-static.a
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/opt/homebrew/Cellar/openssl@3/3.3.1/lib/libcrypto.dylib

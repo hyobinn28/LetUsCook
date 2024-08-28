@@ -1,11 +1,14 @@
 #include "Recipe.h"
 #include <sstream>
 
+using namespace std;
+
 string Recipe::getIngredientsAsString() const {
     stringstream ss;
     
     for(size_t i = 0; i < ingredients.size(); ++i) {
         ss << ingredients[i];
+
         if(i < ingredients.size() - 1) {
             ss << ",";
         }
@@ -13,7 +16,7 @@ string Recipe::getIngredientsAsString() const {
     return ss.str();
 }
 
-void Recipe::setIngredientsFromString(const string& ingredientsStr) {
+void Recipe::setIngredientsFromString(const string &ingredientsStr) {
     stringstream ss(ingredientsStr);
     string item;
 
@@ -27,6 +30,7 @@ string Recipe::getTagsAsString() const {
 
     for(size_t i = 0; i < tags.size(); ++i) {
         ss << tags[i];
+
         if(i < tags.size() - 1) {
             ss << ",";
         }
@@ -34,7 +38,7 @@ string Recipe::getTagsAsString() const {
     return ss.str();
 }
 
-void Recipe::setTagsFromString(const string& tagsStr) {
+void Recipe::setTagsFromString(const string &tagsStr) {
     stringstream ss(tagsStr);
     string item;
 
