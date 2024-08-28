@@ -1,0 +1,3 @@
+/Users/mac/final/final-project-template-let-us-cook/backend/build/CMakeFiles/LetUsCook.dir
+/Users/mac/final/final-project-template-let-us-cook/backend/build/CMakeFiles/edit_cache.dir
+/Users/mac/final/final-project-template-let-us-cook/backend/build/CMakeFiles/rebuild_cache.dir

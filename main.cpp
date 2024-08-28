@@ -126,5 +126,55 @@ void getUserInput(RecipeManager& manager) {
 int main() {
     RecipeManager manager;
     getUserInput(manager);
+
+    crow::SimpleApp app; 
+
+    RecipeManager recipeManager;
+    UserManager userManager;
+
+    // Define a simple "Hello, World!" route
+    CROW_ROUTE(app, "/")
+    ([]() {
+        return "Hello, World!";
+    });
+
+    // Define a route to get a recipe by ID
+    CROW_ROUTE(app, "/recipe/<int>")
+    ([&recipeManager](int id) {
+        try {
+            Recipe recipe = recipeManager.readRecipe(id);
+            std::stringstream result;
+            result << "Recipe Name: " << recipe.name << "\n"
+                   << "Ingredients: " << recipe.getIngredientsAsString() << "\n"
+                   << "Instructions: " << recipe.instructions << "\n"
+                   << "Tags: " << recipe.getTagsAsString();
+            return crow::response(result.str());
+        } catch (const std::exception& e) {
+            return crow::response(404, "Recipe not found.");
+        }
+    });
+
+    // Define a route to create a new recipe (for simplicity, we're not doing full validation)
+    CROW_ROUTE(app, "/recipe").methods(crow::HTTPMethod::POST)
+    ([&recipeManager](const crow::request& req) {
+        auto x = crow::json::load(req.body);
+        if (!x) {
+            return crow::response(400, "Invalid JSON");
+        }
+
+        Recipe recipe;
+        recipe.name = x["name"].s();
+        recipe.setIngredientsFromString(x["ingredients"].s());
+        recipe.instructions = x["instructions"].s();
+        recipe.setTagsFromString(x["tags"].s());
+
+        // For simplicity, we skip token handling in this basic example
+        int id = recipeManager.createRecipe("dummy-token", recipe);
+        return crow::response(201, "Recipe created with ID: " + std::to_string(id));
+    });
+
+    // Run the Crow application on port 8080
+    app.port(8080).multithreaded().run();
+}
     return 0;
 }
