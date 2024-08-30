@@ -134,6 +134,7 @@ Regularly commit code to the project repository so that all front-end changes ar
 This diagram and description outline the core structure of the "Let Us Cook" project, highlighting how data flows between classes and how responsibilities are distributed across different components.
 
  
+ 
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
  
@@ -143,8 +144,19 @@ This diagram and description outline the core structure of the "Let Us Cook" pro
  >   * A new class diagram incorporating your changes after considering the SOLID principles.
  >   * For each update in your class diagram, you must explain in 3-4 sentences:
  >     * What SOLID principle(s) did you apply?
+>      * Single Responsibility Principle, Open/Closed Principle, Liskov Substitution Principle, Interface Segregation Principle, Dependency Inversion Principle
  >     * How did you apply it? i.e. describe the change.
+>      * "Single Responsibility Principle": By separating the responsibilities of user management and recipe management into distinct classes, the code became more modular and easier to maintain.
+>      * "Open/Closed Principle": For example, if new types of recipes or user roles need to be added, this can be done by extending existing classes rather than modifying them.
+>      * "Liskov Substitution Principle": For instance, in the user management system, any subclass of a User should be usable wherever a User object is expected, without introducing errors.
+>      * "Interface Segregation Principle": For example, separate interfaces were created for user authentication and recipe management rather than having a single interface that does everything.
+>      * "Dependency Inversion Principle" For example, instead of the UserManager class depending directly on a specific database implementation, it depends on an abstract interface that can be implemented by any database class.
  >     * How did this change help you write better code?
+>      * "Single Responsibility Principle": This change improved the code's readability and maintainability, making it easier to update or extend functionality without affecting other parts of the system.
+>      * "Open/Closed Principle": This approach minimizes the risk of introducing bugs into existing functionality and makes it easier to implement new features.
+>      * "Liskov Substitution Principle": This ensures that the code remains reliable and flexible, allowing for future extensions without breaking existing functionality.
+>      * "Interface Segregation Principle": This segregation makes the code more modular and reduces the complexity for classes that implement these interfaces, leading to more focused and manageable code.
+>      * "Dependency Inversion Principle": This inversion of dependency makes the system more flexible and easier to refactor. It also allows for easier testing by enabling the use of mock objects in place of actual database connections during unit tests.
  > * Perform a new sprint plan like you did in Phase II.
  > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
  
