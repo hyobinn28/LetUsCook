@@ -150,7 +150,7 @@ This diagram and description outline the core structure of the "Let Us Cook" pro
 >      * "Open/Closed Principle": For example, if new types of recipes or user roles need to be added, this can be done by extending existing classes rather than modifying them.
 >      * "Liskov Substitution Principle": For instance, in the user management system, any subclass of a User should be usable wherever a User object is expected, without introducing errors.
 >      * "Interface Segregation Principle": For example, separate interfaces were created for user authentication and recipe management rather than having a single interface that does everything.
->      * "Dependency Inversion Principle" For example, instead of the UserManager class depending directly on a specific database implementation, it depends on an abstract interface that can be implemented by any database class.
+>      * "Dependency Inversion Principle": For example, instead of the UserManager class depending directly on a specific database implementation, it depends on an abstract interface that can be implemented by any database class.
  >     * How did this change help you write better code?
 >      * "Single Responsibility Principle": This change improved the code's readability and maintainability, making it easier to update or extend functionality without affecting other parts of the system.
 >      * "Open/Closed Principle": This approach minimizes the risk of introducing bugs into existing functionality and makes it easier to implement new features.
@@ -174,6 +174,59 @@ This diagram and description outline the core structure of the "Let Us Cook" pro
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
+> What I Did (Stella)
+> 1. Project Structure 
+> * The main directories include:
+>     * .vscode: Contains configuration files for Visual Studio Code, including c_cpp_properties.json and settings.json.
+>     * backend: Contains the core source code and configurations for the backend.
+>     * config: Holds configuration files like db_config.json that store database connection details.
+>     * src: Contains the source code files that implement the functionality of your application.
+2. .vscode Directory
+> * c_cpp_properties.json: This file configures the include paths, compiler settings, and IntelliSense for C++ projects in Visual Studio Code. It helps in setting up the environment so that the IDE understands the project structure and dependencies.
+> * settings.json: Stores project-specific settings for Visual Studio Code, such as formatting rules, linting, and other preferences.
+3. backend Directory
+> * config/db_config.json:
+>     * This file stores the database configuration settings such as the hostname, port, username, password, and database name. It’s a centralized location for managing database connection details that your Database class uses to connect to the MySQL server.
+4. src Directory
+> * bcrypt.cpp & bcrypt.h:
+
+>    * These files handle password hashing using the bcrypt algorithm. The bcrypt algorithm is used to securely hash passwords before storing them in the database. The .cpp file implements the functions declared in the .h header file. These files are essential for ensuring that passwords are stored securely and are not exposed in plain text.
+> * Database.cpp & Database.h:
+
+>    * Database.h declares the Database class, which is responsible for managing the connection to the MySQL database and performing SQL operations like queries and updates.
+Database.cpp implements the Database class. It includes methods for connecting to the database, executing SQL queries, and fetching results. It ensures the backend can interact with the MySQL database to store and retrieve data.
+> * jwt.cpp & jwt.h:
+
+>    * These files manage JSON Web Tokens (JWTs), which are used for securely transmitting information between the frontend and backend. JWTs are typically used for authentication purposes, ensuring that the user making a request is authenticated.
+The .h file declares the functions and classes related to JWT handling, and the .cpp file implements these functions.
+> * main.cpp:
+
+>    * This is the entry point of your application. It likely contains the main function that initializes the application, sets up the necessary services (like the database connection), and handles user input for registering and logging in.
+>     * This file coordinates the execution of various parts of the backend and interacts with the user, likely through a command-line interface.
+> * Recipe.cpp & Recipe.h:
+
+>    * Recipe.h defines the Recipe class, which encapsulates the details of a recipe, such as its name, ingredients, instructions, and tags. This class provides methods for managing recipe details.
+>    * Recipe.cpp implements the Recipe class, providing the logic for handling recipes, such as converting ingredients and tags to and from strings for storage in the database.
+> * RecipeManager.cpp & RecipeManager.h:
+
+>    * RecipeManager.h declares the RecipeManager class, which is responsible for managing the collection of recipes. It includes methods for creating, reading, updating, and deleting recipes in the database.
+>     * RecipeManager.cpp implements the RecipeManager class, providing the logic for interacting with the Recipe class and the database to manage recipes effectively.
+> * UserManager.cpp & UserManager.h:
+
+>    * UserManager.h declares the UserManager class, which handles user-related operations like registration, login, and profile management.
+>    * UserManager.cpp implements the UserManager class. It contains the logic for securely handling user data, such as hashing passwords, validating user credentials, and interacting with the Database class to manage user information.
+5. CMakeLists.txt
+> * CMakeLists.txt is the build configuration file for your project. It sets up the CMake build system, specifying the C++ standard, including necessary directories, and linking the required libraries such as OpenSSL and MySQL.
+> * This file ensures that all the source files are compiled and linked together correctly to create the final executable.
+
+Summary
+> * I have set a backend system for managing user accounts and recipes, utilizing C++ for the core logic, bcrypt for secure password hashing, and MySQL for data storage.
+> * The main.cpp file serves as the entry point, coordinating interactions between users and the backend services.
+> * The backend is modular, with distinct classes handling different aspects of the application (e.g., Recipe, User, Database), following the principles of encapsulation and separation of concerns.
+> * CMake is used to manage the build process, ensuring that all dependencies are properly included and linked.
+> * I ensured the codebase is maintainable, scalable, and secure. 
+
+
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
